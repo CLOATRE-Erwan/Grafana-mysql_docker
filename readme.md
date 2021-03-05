@@ -28,7 +28,9 @@ pip install docker-compose
 ```
 
 ## Etape 2 : Up
-
+```bash
+cd Grafana-mysql_docker
+```
 ```bash
 docker-compose up -d
 ```
