@@ -34,7 +34,7 @@ cd Grafana-mysql_docker
 ```bash
 docker-compose up -d
 ```
-Contenu du docker-compose.yml
+### Contenu du docker-compose.yml
 ```bash
 version: '2'
 services:
