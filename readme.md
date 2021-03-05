@@ -59,7 +59,7 @@ services:
       - '80:3000'
     volumes:
       - ./grafana/provisioning/datasource:/etc/grafana/provisioning/datasources
-      - .//grafana/provisioning/dashboard:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning/dashboard:/etc/grafana/provisioning/dashboards
  ```
 
 ## Etape 3 : Resultats
