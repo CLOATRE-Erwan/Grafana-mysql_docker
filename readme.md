@@ -38,7 +38,7 @@ docker-compose up -d
 A partir de l'ip du serveur et du port de Grafana
 
 
-![Drag Racing](img/con.png)
+![Drag Racing](img/_con.png)
 
 
 ![Drag Racing](img/graph.png)
