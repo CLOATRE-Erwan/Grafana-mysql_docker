@@ -1,0 +1,25 @@
+# config file version
+apiVersion: 1
+
+# list of datasources that should be deleted from the database
+# list of datasources to insert/update depending
+# whats available in the database
+datasources:
+  # <string, required> name of the datasource. Required
+- name: MySQL
+  # <string, required> datasource type. Required
+  type: mysql
+  # <string, required> access mode. direct or proxy. Required
+  access: proxy
+  # <int> org id. will default to orgId 1 if not specified
+  orgId: 1
+  # <string> url
+  url: mysqldb
+  # <string> database password, if used
+  password: 1234
+  # <string> database user, if used
+  user: root
+  # <string> database name, if used
+  database: CRKI
+  # <bool> allow users to edit datasources from the UI.
+  editable: true

@@ -1,0 +1,24 @@
+version: '2'
+services:
+
+  # simple myself setup
+  mysql:
+    image: mysql:5.7
+    container_name: mysqldb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: CRKI
+
+  # grafana used for graphing mysql data
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - '80:3000'
+    volumes:
+      - ./grafana/provisioning/datasource:/etc/grafana/provisioning/datasources
+      - .//grafana/provisioning/dashboard:/etc/grafana/provisioning/dashboards
