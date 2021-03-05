@@ -9,8 +9,16 @@
 
 ## Projet
 ---
-
 ## Etape 1
+### Connexion au seveur
+```bash
+ssh user@IpDuServeur
+```
+### Ghit clone
+```bash
+git clone https://github.com/CLOATRE-Erwan/Grafana-mysql_docker
+
+## Etape 2
 ### Docker-compose
 ```bash
 pip install docker-compose
