@@ -9,79 +9,31 @@
 
 ## Projet
 ---
-## Etape 1
+## Etape 1 : Instalation des prérequis
 ### Connexion au seveur
 ```bash
 ssh user@IpDuServeur
 ```
-### Ghit clone
-```bash
-git clone https://github.com/CLOATRE-Erwan/Grafana-mysql_docker
 
-## Etape 2
+
+### Git clone
+```bash
+git clone https://github.com/CLOATRE-Erwan/Grafana-mysql_docker.git
+```
+
+
 ### Docker-compose
 ```bash
 pip install docker-compose
 ```
 
-### Creation du fichier yml
+## Etape 2 : Up
 
-```yml
-version: '2'
-services:
-
-  # simple myself setup
-  mysql:
-    image: mysql:5.7
-    container_name: mysqldb
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-
-  # grafana used for graphing mysql data
-  grafana:
-    image: grafana/grafana
-    container_name: grafana
-    ports:
-      - '80:3000'
-    environment:
-      GF_INSTALL_PLUGINS: percona-percona-app
-```
-
-```shell
+```bash
 docker-compose up -d
 ```
 
-## Etape 2
-### Mysql
-
-Mise en place des donne mysql dans le volume
-
-```bash
-docker cp file.sql <CONTAINER ID>:/
-```
-
-Crée la base de donne
-
-```shell
-docker exec -it container_id bash
-```
-
-```shell
-mysql -uroot -ppassword 
-```
-
-```mysql
-CREATE DATABASE CRKI
-USE CRKI
-SOURCE file.sql
-```
-
-
-
-
-## Etape 3
+## Etape 3 : Resultats
 
 A partir de l'ip du serveur et du port de Grafana
 
